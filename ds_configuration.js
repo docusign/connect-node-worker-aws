@@ -11,8 +11,9 @@ exports.config = {
   , outputDir: "output" // relative to this app's root dir
   , outputFilePefix: "order_"
   , envelopeCustomField: "Sales order" // The value of this field is used in the output file name
-  , envelopeColorCustomField: "Color" // The value of this field is used for the color bulb
+  , envelopeColorCustomField: "Light color" // The value of this field is used for the color bulb
   , lifxAccessToken: env.LIFX_ACCESS_TOKEN  || '{LIFX_ACCESS_TOKEN}' // optional
+  , lifxSelector: 'all'
   , clientId: env.DS_CLIENT_ID || '{CLIENT_ID}'
     /** The guid for the user who will be impersonated.
      *  An email address can't be used.
