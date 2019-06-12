@@ -8,6 +8,7 @@ exports.config = {
   , basicAuthPW: env.BASIC_AUTH_PW || '{BASIC_AUTH_PW}' // The required Basic Auth Password (From Connect)
   , queueUrl: env.QUEUE_URL  || '{QUEUE_URL}'
   , queueRegion: env.QUEUE_REGION || '{QUEUE_REGION}'
+  , messageGroupId: env.MESSAGE_GROUP_ID ||'{MESSAGE_GROUP_ID}' // Suggestion: "1"
   , outputDir: "output" // relative to this app's root dir
   , outputFilePefix: "order_"
   , envelopeCustomField: "Sales order" // The value of this field is used in the output file name
