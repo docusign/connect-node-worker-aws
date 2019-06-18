@@ -39,7 +39,8 @@ SDK libraries for C#, Java, Node.js, Python, Ruby, C++, and Go.
 ## Installation
 
 1. Install the example 
-   [Connect listener for AWS](../connect-node-listener-aws) on AWS.
+   [Connect listener for AWS](https://github.com/docusign/connect-node-listener-aws)
+   on AWS.
    At the end of this step, you will have the
    `Queue URL`, and `Queue Region`.
 
