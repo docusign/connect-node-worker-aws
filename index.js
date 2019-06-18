@@ -70,6 +70,7 @@ async function listenForever() {
         checkLogQ[len - 1] = msg;
       }
     }
+
     /**
      * Dump checkLogQ to the console
      */
@@ -77,7 +78,6 @@ async function listenForever() {
       checkLogQ.forEach(m =>{console.log(m)});
       checkLogQ = []; // reset
     }
-
 
     try {
       AWS.config.update({region: queueRegion});
@@ -114,9 +114,8 @@ async function listenForever() {
   while (true) {
     if (restart) {
       console.log(`${new Date().toUTCString()} Starting queue worker`);
-      await startQueue();
-      await sleep(5);
       restart = false;
+      await startQueue();
     }
     await sleep(5);
   }
