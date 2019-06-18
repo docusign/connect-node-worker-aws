@@ -13,7 +13,8 @@ messages from the queue and then processes them:
    the envelope's combined set of documents,
    and stores them in the `output` directory.
 
-   The envelope must include an Envelope Custom Field
+   For this example, the envelope **must** 
+   include an Envelope Custom Field
    named `Sales order.` The Sales order field is used
    to name the output file.
 1. Optionally, this worker app can be configured to
@@ -40,8 +41,7 @@ SDK libraries for C#, Java, Node.js, Python, Ruby, C++, and Go.
 1. Install the example 
    [Connect listener for AWS](../connect-node-listener-aws) on AWS.
    At the end of this step, you will have the
-   `Queue URL`, `Queue Region`
-   and `message group ID`.
+   `Queue URL`, and `Queue Region`.
 
 1. Using AWS IAM, create an IAM `User` with 
    access to your SQS queue. 
@@ -49,7 +49,8 @@ SDK libraries for C#, Java, Node.js, Python, Ruby, C++, and Go.
    Record the IAM user's AWS Access Key and Secret.
 
    Configure environment variables 
-   `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` 
+   `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` with the
+   IAM user credentials.
 
 1. Install the latest Long Term Support version of 
    Node v8.x or v10.x on your system, with the
@@ -90,12 +91,13 @@ The envelope **must include an Envelope Custom Field named "Sales order".**
 * Check the `output` directory to see if the envelope's
   combined documents and CoC were downloaded.
 
-  By default, the documents will only be downloaded if
-  the envelope is complete and includes a 
+  For this code example, the 
+  envelope's documents will only be downloaded if
+  the envelope is `complete` and includes a 
   `Sales order` custom field.
 
 ## Integration testing
-The repo includes a `runTest.js` file. It conducts an
+This repository includes a `runTest.js` file. It conducts an
 end-to-end integration test of enqueuing and dequeuing
 test messages. See the file for more information.
 
